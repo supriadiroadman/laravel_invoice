@@ -32,7 +32,7 @@ class ProductController extends Controller
             $product = Product::create($product);
             return redirect('/product')->with(['success' => '<strong>' . $product->title . '</strong> Berhasil disimpan']);
         } catch (Exception $e) {
-            return redirect('/product/new')->with(['error' => $e->getMessage()]);
+            return redirect('/product/create')->with(['error' => $e->getMessage()]);
         }
     }
 
